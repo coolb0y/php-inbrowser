@@ -1,5 +1,12 @@
 <html>
     <head>
+    <script src="./eruda/eruda.js"></script>
+    <script>
+        eruda.init(); // This shows the console on load
+        console.log("Hello from Eruda!");
+        eruda.show();
+        eruda.show('console');
+    </script>
         <script async type = "text/javascript" src = "./php-tags.jsdelivr.mjs"></script>
         <script type = "text/php" src = "./test.php" data-stdin = "#input" data-stdout = "#output" data-stderr = "#error"></script>
     </head>
