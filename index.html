@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<script type="text/javascript">
+    // get pathname like /api1/folder1/file.php
+    const fullPath2 = window.location.pathname;
+
+    // optionally extract just the relative path
+    const phpPath2 = fullPath2.startsWith('/') ? fullPath2.slice(1) : fullPath2;
+
+    alert("Full PHP path: " + fullPath2);
+    alert("PHP path: " + phpPath2);
+    
+    let hrefpath  = window.location.href;
+    alert("href: "+ hrefpath);
+</script>
+<script type="text/javascript">
+    const urlParams = new URLSearchParams(window.location.search);
+    const phpPath = urlParams.get("php_path");
+
+    if (phpPath) {
+        alert("PHP path from query parameter: " + phpPath);
+    } else {
+        alert("No PHP path found.");
+    }
+
+    const fullPath = window.location.protocol + "//" + window.location.host + window.location.pathname;
+    console.log("Full Path: " + fullPath);
+</script>
+</head>
+<body>
+    <!-- Optional input if your PHP script takes input -->
+    <textarea id="input" style="display:none;"></textarea>
+
+    <div id="output"></div>
+    <div id="error"></div>
+</body>
+</html>
+
